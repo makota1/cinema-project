@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container text-center">
+    <div>
+        <h1>[[#{app.title}]]</h1>
+    </div>
+    <div>
+        <h3><a th:href="@{/list_users}" th:text="#{app.list_users}"></a></h3>
+        <h3><a th:href="@{/register}" th:text="#{app.register}"></a></h3>
+        <h3><a th:href="@{/login}" th:text="#{app.login}"></a></h3>
+    </div>
+    <li class="nav-item">
+        <a class="nav-link" th:href="@{?lang=en}">
+            <img th:src="@{/usa.png}" width="30"/> English
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" th:href="@{?lang=ua}">
+            <img th:src="@{/ua.png}" width="30"/> Українська
+        </a>
+    </li>
+</div>
+</body>
+</html>
